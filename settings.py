@@ -19,7 +19,7 @@ PAYMENTS_LOADER = 'MontmeloPaymentsLoader'
 # ----------------------
 
 # Show Payments section in menu & home options. Default: False.
-SHOW_PAYMENTS = True
+# SHOW_PAYMENTS = True
 
 # Configure 'by area' payment breakdown. Default: ['area', 'payee', 'description']
 # PAYMENTS_BREAKDOWN_BY_AREA = ['area', 'payee', 'description']
@@ -31,7 +31,7 @@ SHOW_PAYMENTS = True
 # PAYMENTS_YEAR_RANGE = False
 
 # Show Tax Receipt section in menu & home options. Default: False.
-SHOW_TAX_RECEIPT = True
+# SHOW_TAX_RECEIPT = True
 
 # Show Counties & Towns links in Policies section in menu & home options. Default: False.
 # SHOW_COUNTIES_AND_TOWNS = True
@@ -141,7 +141,7 @@ FEATURED_PROGRAMMES = ['1621', '1710', '3380', '2410', '3110']
 # ----------------------
 
 # Use new Sankey visualization or the old one. Default: False
-# OVERVIEW_USE_NEW_VIS = True
+OVERVIEW_USE_NEW_VIS = True
 
 OVERVIEW_INCOME_NODES = [
                           {

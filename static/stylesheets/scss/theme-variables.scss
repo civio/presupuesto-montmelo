@@ -12,9 +12,9 @@ $gray-lightest:         lighten($gray-base, 96%) !default;
 
 $text-color:            #414141;
 
-$brand-primary:         #d32e12;
-$brand-secondary:       #49647A;
-$brand-terciary:        #DDCFC1;
+$brand-primary:         #A01A38;
+$brand-secondary:       #A01A38;
+$brand-terciary:        mix( $brand-primary, white, 20%);
 
 $link-color:            $brand-primary;
 $link-hover-color:      $link-color;
@@ -48,7 +48,7 @@ $container-large-desktop:  (1050px + $grid-gutter-width);
 // Main Entity Logo
 // -------------
 
-$main-entity-logo-width:   81px;
+$main-entity-logo-width:   217px;
 $main-entity-logo-height:  68px;
 
 
@@ -60,7 +60,7 @@ $navbar-border-radius: 0;
 // Point at which the navbar becomes uncollapsed
 // $grid-float-breakpoint: 992px;  // $screen-md
 
-$dvmi-menu-length: 5;  // Number of items in main menu
+$dvmi-menu-length: 3;  // Number of items in main menu
 
 // Navbar background color
 $navbar-default-bg:       $brand-primary;
@@ -83,7 +83,7 @@ $footer-bg: $brand-primary;
 // Page Header
 // --------------
 
-$page-header-bg:            mix( $brand-secondary, white, 8% );
+$page-header-bg:            mix( $brand-secondary, white, 6% );
 $page-header-border-color:  mix( $brand-secondary, white, 70% );
 
 
@@ -184,11 +184,11 @@ $slider-color:  $brand-secondary;
 // Data Sources
 // --------------
 
-$data-sources-color: $brand-terciary;
+$data-sources-color: mix($brand-secondary, white, 50%);
 
 
 // Sankey Viz
 // --------------
 
 $sankey-income-color:   $brand-primary;
-$sankey-expense-color:  complement($sankey-income-color);
+$sankey-expense-color:  darken(complement($sankey-income-color), 8%);
