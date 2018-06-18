@@ -523,3 +523,11 @@ G,9,4,1,Devolución de fianzas
 #
 # Conceptos específicos de Montmeló
 #
+G,2,7,0,Gastos imprevistos y funciones no clasificadas
+G,4,1,0,A organismos autónomos de la entidad local
+G,4,8,0,A familias e instituciones sin fines de lucro
+G,5,5,5,Fondo de contingencia
+I,4,7,0,De empresas privadas
+I,4,8,0,De familias e instituciones sin fines de lucro
+I,5,2,0,Intereses de depósitos
+I,7,7,0,De empresas privadas

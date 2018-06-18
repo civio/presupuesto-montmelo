@@ -523,3 +523,11 @@ G,9,4,1,Devolució de fiances
 #
 # Conceptos específicos de Montmeló
 #
+G,2,7,0,Despeses imprevistes
+G,4,1,0,A organismes autònoms de l'entitat local
+G,4,8,0,A famílies i institucions sense fins de lucre
+G,5,5,5,Fons de contingència
+I,4,7,0,A empreses privades
+I,4,8,0,A famílies i institucions sense fins de lucre
+I,5,2,0,Interessos de dipòsits
+I,7,7,0,D'empreses privades
