@@ -12,7 +12,7 @@ MAIN_ENTITY_NAME = 'Montmeló'
 BUDGET_LOADER = 'MontmeloBudgetLoader'
 
 # Theme Payments Loader class name. Default: 'PaymentsLoader'
-PAYMENTS_LOADER = 'MontmeloPaymentsLoader'
+#PAYMENTS_LOADER = 'MontmeloPaymentsLoader'
 
 
 # Show / hide Settings
