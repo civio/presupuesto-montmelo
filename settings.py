@@ -92,11 +92,11 @@ LANGUAGES = (
 
 # Facebook Aplication ID used in social_sharing temaplate. Default: ''
 # In order to get the ID create an app in https://developers.facebook.com/
-FACEBOOK_ID             = ''
+FACEBOOK_ID             = '1725731800855722'
 
 # Google Analytics ID. Default: ''
 # In order to get the ID create a Google Analytics Acount in https://analytics.google.com/analytics/web/
-ANALYTICS_ID            = ''
+ANALYTICS_ID            = 'UA-28946840-46'
 
 # Setup Data Source Budget link
 DATA_SOURCE_BUDGET      = ''
@@ -108,13 +108,13 @@ DATA_SOURCE_POPULATION  = ''
 DATA_SOURCE_INFLATION   = ''
 
 # Setup Main Entity Web Url
-MAIN_ENTITY_WEB_URL     = ''
+MAIN_ENTITY_WEB_URL     = 'http://www.montmelo.cat/'
 
 # Setup Main Entity Legal Url (if empty we hide the link)
-MAIN_ENTITY_LEGAL_URL   = ''
+MAIN_ENTITY_LEGAL_URL   = 'http://www.montmelo.cat/lnk19/avis-legal.htm'
 
 # Setup Main Entity Legal Url (if empty we hide the link)
-MAIN_ENTITY_PRIVACY_URL = ''
+MAIN_ENTITY_PRIVACY_URL = 'http://www.montmelo.cat/lnk20/proteccio-de-dades.htm'
 
 # External URL for Cookies Policy (if empty we use out template page/cookies.html)
 COOKIES_URL             = ''
