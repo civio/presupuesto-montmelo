@@ -12,7 +12,7 @@ MAIN_ENTITY_NAME = 'Montmeló'
 BUDGET_LOADER = 'MontmeloBudgetLoader'
 
 # Theme Payments Loader class name. Default: 'PaymentsLoader'
-PAYMENTS_LOADER = 'MontmeloPaymentsLoader'
+#PAYMENTS_LOADER = 'MontmeloPaymentsLoader'
 
 
 # Show / hide Settings
@@ -72,7 +72,7 @@ PAYMENTS_LOADER = 'MontmeloPaymentsLoader'
 # BREAKDOWN_BY_UID = False
 
 # Include financial income/expenditures in overview and global policy breakdowns. Default: False
-# INCLUDE_FINANCIAL_CHAPTERS_IN_BREAKDOWNS = True
+INCLUDE_FINANCIAL_CHAPTERS_IN_BREAKDOWNS = True
 
 # Does the data includes a fifth functional classification level, subprogrammes?. Default: False
 # USE_SUBPROGRAMMES = True
@@ -99,13 +99,13 @@ FACEBOOK_ID             = '1725731800855722'
 ANALYTICS_ID            = 'UA-28946840-46'
 
 # Setup Data Source Budget link
-DATA_SOURCE_BUDGET      = ''
+DATA_SOURCE_BUDGET      = 'https://www.seu-e.cat/web/montmelo/govern-obert-i-transparencia/gestio-economica'
 
 # Setup Data Source Population link
-DATA_SOURCE_POPULATION  = ''
+DATA_SOURCE_POPULATION  = 'http://www.ine.es/jaxiT3/Tabla.htm?t=2861&L=0'
 
 # Setup Data Source Inflation link
-DATA_SOURCE_INFLATION   = ''
+DATA_SOURCE_INFLATION   = 'http://www.ine.es/jaxiT3/Tabla.htm?t=22350&L=0'
 
 # Setup Main Entity Web Url
 MAIN_ENTITY_WEB_URL     = 'http://www.montmelo.cat/'
@@ -117,7 +117,7 @@ MAIN_ENTITY_LEGAL_URL   = 'http://www.montmelo.cat/lnk19/avis-legal.htm'
 MAIN_ENTITY_PRIVACY_URL = 'http://www.montmelo.cat/lnk20/proteccio-de-dades.htm'
 
 # External URL for Cookies Policy (if empty we use out template page/cookies.html)
-COOKIES_URL             = ''
+COOKIES_URL             = 'http://www.montmelo.cat/lnk19/avis-legal.htm#Cookies'
 
 # We can define additional URLs applicable only to the theme. These will get added
 # to the project URL patterns list.
@@ -143,36 +143,9 @@ FEATURED_PROGRAMMES = ['1621', '1710', '3380', '2410', '3110']
 # Use new Sankey visualization or the old one. Default: False
 OVERVIEW_USE_NEW_VIS = True
 
-OVERVIEW_INCOME_NODES = [
-                          {
-                            'nodes': [['11', '113']],
-                            'label': 'Impuesto a bienes inmuebles de naturaleza urbana',
-                            'link_id': '11'
-                          },
-                          {
-                            'nodes': [['30', '300']],
-                            'label': 'Servicio de abastecimiento de agua',
-                            'link_id': '30'
-                          },
-                          '42', '45',
-                          {
-                            'nodes': [['29', '293']],
-                            'label': 'Impuesto general indirecto canario (IGIC)',
-                            'link_id': '29'
-                          },
-                          {
-                            'nodes': [['11', '115']],
-                            'label': 'Impuesto sobre vehículos de tracción mecánica',
-                            'link_id': '11'
-                          },
-                          {
-                            'nodes': [['30', '302']],
-                            'label': 'Servicio de recogida de basuras',
-                            'link_id': '30'
-                          },
-                        ]
+OVERVIEW_INCOME_NODES = ['11', '42', '30', '13', '46', '33']
 
-OVERVIEW_EXPENSE_NODES = ['16', '13', '92', '15', '33', '23', '34', '17', '32']
+OVERVIEW_EXPENSE_NODES = ['92', '13', '16', '23', '15', '33', '32', '45', '34']
 
 # How much padding between Sankey nodes. Default: 2 (Optional)
 # OVERVIEW_NODE_PADDING = 2
