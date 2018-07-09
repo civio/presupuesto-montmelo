@@ -1,0 +1,130 @@
+<script>
+  $(function () {
+
+    var breakdown = {{ breakdown.to_json( labels=descriptions['functional'] )|safe }},
+        getBreakdownValue = getBreakdownValueFunction('expense', '{{ latest_budget.name()|safe }}'),
+        gridData = breakdownToTable(breakdown),
+        myGrid;
+
+
+    // House tax
+    var houseValue = function() {
+      var value = parseFloat($("#select-house").val().replace(/\./g, "").replace(/,/, ".")).toFixed(0);
+      if (isNaN(value)) {
+        $("#select-house").val("")
+        value = "";
+      }
+      return value;
+    }
+
+    var houseFamilyBonus = function(value) {
+      result = 0;
+      if (value <= 60000) {
+        result = 0.6;
+      } else if (value > 60000 && value <= 100000) {
+        result = 0.5;
+      } else if (value > 100000 && value <= 200000) {
+        result = 0.2;
+      } else if (value > 200000 && value <= 300000) {
+        result = 0.1;
+      } else if (value > 300000 && value <= 400000) {
+        result = 0.05;
+      }
+      return result;
+    };
+
+    var houseFamilyDisabilityBonus = function(value) {
+      result = 0;
+      if (value <= 60000) {
+        result = 0.9;
+      } else if (value > 60000 && value <= 100000) {
+        result = 0.6;
+      } else if (value > 100000 && value <= 200000) {
+        result = 0.3;
+      } else if (value > 200000 && value <= 400000) {
+        result = 0.15;
+      }
+      return result;
+    };
+
+    TaxReceipt.taxes.house.callback = function(selector, values) {
+      var value = houseValue();
+      var quota = value * 0.00863;
+      var bonus = $('#select-'+selector+'-bonus').val() | 0;
+      var bonusValues = [0, .5, houseFamilyBonus(value), houseFamilyDisabilityBonus(value)];
+      return quota * (1 - bonusValues[bonus]);
+    };
+
+    // Vehicle tax
+    TaxReceipt.taxes.vehicle.values = [0, 25.24, 68.16, 143.88, 179.22, 224.00, 8.84, 15.14, 30.30, 60.58, 121.16];
+    TaxReceipt.taxes.vehicle.callback = function(selector, values) {
+      var value = +$('#select-'+selector).val();
+      var quota = values[value];
+      var bonus = $('#select-'+selector+'-bonus').val() | 0;
+      var bonusValues = [0, 1.00, 1.00, 0.75];
+      return quota * (1 - bonusValues[bonus]);
+    };
+
+    // Extra vehicle tax
+    TaxReceipt.taxes.vehicleExtra.values = [0, 25.24, 68.16, 143.88, 179.22, 224.00, 8.84, 15.14, 30.30, 60.58, 121.16];
+    TaxReceipt.taxes.vehicleExtra.callback = function(selector, values) {
+      var value = +$('#select-'+selector).val();
+      var quota = values[value];
+      var bonus = $('#select-'+selector+'-bonus').val() | 0;
+      var bonusValues = [0, 1.00, 1.00, 0.75];
+      return quota * (1 - bonusValues[bonus]);
+    };
+
+    // Garbage tax
+    TaxReceipt.taxes.garbage.values = [
+      [138.57, 142.93, 146.81, 150.20, 153.10, 155.53, 157.47],
+      [145.86, 150.45, 154.53, 158.10, 161.16, 163.71, 165.75],
+      [153.15, 157.98, 162.26, 166.01, 169.22, 171.90, 174.04],
+      [160.45, 165.50, 169.98, 173.91, 177.28, 180.08, 182.33],
+      [167.74, 173.02, 177.71, 181.82, 185.22, 185.22, 185.22]
+    ];
+    TaxReceipt.taxes.garbage.callback = function(selector, values) {
+      var valueMembers = +$('#select-'+selector+'-members').val();
+      var valueArea = +$('#select-'+selector+'-area').val();
+      var quota = values[valueArea][valueMembers];
+      return quota;
+    };
+
+    // Parking tax
+    TaxReceipt.taxes.parking.values = [0, 31.11, 46.72];
+
+
+    // Override redrawGrid method
+    TaxReceipt.redrawGrid = function() {
+      if ( myGrid !== undefined ) {
+        myGrid.destroy();
+      }
+
+      myGrid = createBudgetGrid('#myGrid', gridData, [
+        { data: 'label', title: '{{ _("Política") }}', render: getPolicyLinkFormatter() },
+        {
+          data:   getBreakdownValue,
+          title:  '{{ _("Gasto") }}',
+          render: TaxReceipt.calculatePersonalTax,
+          year:   breakdown.years['{{ latest_budget.name()|safe }}']
+        }
+      ]);
+    };
+
+
+    // Initialize tax receipt
+    TaxReceipt.setup( breakdown, getBreakdownValue );
+
+    // Currency mask for house input
+    $("#select-house").change(function() {
+      $("#select-house").val(houseValue().replace(/(\d)(?=(?:\d{3})+\b)/g, "$1."));
+    });
+
+    $("#select-house").on("keypress", function(event) {
+      var keycode = event.which;
+      if (keycode == 13)
+        $("#select-house-bonus").trigger("focus");
+    });
+
+  });
+</script>

@@ -58,3 +58,160 @@ msgstr "D’on vénen els ingressos? En què i per a què és la despesa de l’
 #: templates/welcome/index.html:42
 msgid "Para que tengas una idea general de los ingresos y gastos del Gobierno de Aragón"
 msgstr "Perquè et facis una idea general dels ingressos i les despeses de l'Ajuntament de Montmeló"
+
+#: templates/tax_receipt/tax_receipt_form.html:6
+msgid "Valor catastral de la vivienda"
+msgstr "Valor cadastral de l'habitatge"
+
+#: templates/tax_receipt/tax_receipt_form.html:8
+msgid "Introduce el valor catastral de la vivienda"
+msgstr "Introdueix el valor cadastral de l'habitatge"
+
+#: templates/tax_receipt/tax_receipt_form.html:14
+#: templates/tax_receipt/tax_receipt_form.html:43
+#: templates/tax_receipt/tax_receipt_form.html:72
+msgid "Bonificación"
+msgstr "Bonificació"
+
+#: templates/tax_receipt/tax_receipt_form.html:16
+#: templates/tax_receipt/tax_receipt_form.html:45
+#: templates/tax_receipt/tax_receipt_form.html:74
+msgid "Ninguna"
+msgstr "Cap"
+
+#: templates/tax_receipt/tax_receipt_form.html:17
+msgid "Instalación de sistemas de aprovechamiento de la energía del sol (3 primeros años)"
+msgstr "Instal·lació de sistemes d'aprofitament de l'energia del sol (3 primers anys)"
+
+#: templates/tax_receipt/tax_receipt_form.html:18
+msgid "Familia numerosa o monoparental"
+msgstr "Família nombrosa o monoparental"
+
+#: templates/tax_receipt/tax_receipt_form.html:19
+msgid "Familia numerosa o monoparental, con uno o más miembros con discapacidad"
+msgstr "Família nombrosa o monoparental, amb un o més membres amb discapacitat"
+
+#: templates/tax_receipt/tax_receipt_form.html:29
+#: templates/tax_receipt/tax_receipt_form.html:58
+msgid "Coche muy pequeño (menos de 8 caballos fiscales)"
+msgstr "Cotxe molt petit (menys de 8 cavalls fiscals)"
+
+#: templates/tax_receipt/tax_receipt_form.html:30
+#: templates/tax_receipt/tax_receipt_form.html:59
+msgid "Coche pequeño (entre 8 y 12 caballos fiscales)"
+msgstr "Cotxe petit (entre 8 i 12 cavalls fiscals)"
+
+#: templates/tax_receipt/tax_receipt_form.html:31
+#: templates/tax_receipt/tax_receipt_form.html:60
+msgid "Coche mediano (entre 12 y 16 caballos fiscales)"
+msgstr "Cotxe mitjà (entre 12 i 16 cavalls fiscals)"
+
+#: templates/tax_receipt/tax_receipt_form.html:32
+#: templates/tax_receipt/tax_receipt_form.html:61
+msgid "Coche grande (entre 16 y 20 caballos fiscales)"
+msgstr "Cotxe gran (entre 16 i 20 cavalls fiscals)"
+
+#: templates/tax_receipt/tax_receipt_form.html:33
+#: templates/tax_receipt/tax_receipt_form.html:62
+msgid "Coche muy grande (más de 20 caballos fiscales)"
+msgstr "Cotxe molt gran (més de 20 cavalls fiscals)"
+
+#: templates/tax_receipt/tax_receipt_form.html:34
+#: templates/tax_receipt/tax_receipt_form.html:63
+msgid "Ciclomotores o motocicletas hasta 125 cc"
+msgstr "Ciclomotors o motocicletes fins a 125 cc"
+
+#: templates/tax_receipt/tax_receipt_form.html:35
+#: templates/tax_receipt/tax_receipt_form.html:64
+msgid "Motocicletas de 125 cc hasta 250 cc"
+msgstr "Motocicletes de 125 cc fins a 250 cc"
+
+#: templates/tax_receipt/tax_receipt_form.html:36
+#: templates/tax_receipt/tax_receipt_form.html:65
+msgid "Motocicletas de 250 cc hasta 500 cc"
+msgstr "Motocicletes de 250 cc fins a 500 cc"
+
+#: templates/tax_receipt/tax_receipt_form.html:37
+#: templates/tax_receipt/tax_receipt_form.html:66
+msgid "Motocicletas de 500 cc hasta 1000 cc"
+msgstr "Motocicletes de 500 cc fins a 1000 cc"
+
+#: templates/tax_receipt/tax_receipt_form.html:38
+#: templates/tax_receipt/tax_receipt_form.html:67
+msgid "Motocicletas de más de 1000 cc"
+msgstr "Motocicletes de més de 1000 cc"
+
+#: templates/tax_receipt/tax_receipt_form.html:46
+#: templates/tax_receipt/tax_receipt_form.html:75
+msgid "Exención por vehículos matriculados a nombre de personas discapacitadas"
+msgstr "Exempció per vehicles matriculats a nom de persones discapacitades"
+
+#: templates/tax_receipt/tax_receipt_form.html:47
+#: templates/tax_receipt/tax_receipt_form.html:76
+msgid "Bonificación por vehículos histórico o con una antigüedad mínima de 25 años"
+msgstr "Bonificació per vehicles històric o amb una antiguitat mínima de 25 anys"
+
+#: templates/tax_receipt/tax_receipt_form.html:48
+#: templates/tax_receipt/tax_receipt_form.html:77
+msgid "Bonificación por vehículos con menor impacto ambiental"
+msgstr "Bonificació per vehicles amb menor impacte ambiental"
+
+#: templates/tax_receipt/tax_receipt_form.html:86
+msgid "Un residente o ninguno"
+msgstr "Un resident o cap"
+
+#: templates/tax_receipt/tax_receipt_form.html:87
+msgid "Dos residentes"
+msgstr "Dos residents"
+
+#: templates/tax_receipt/tax_receipt_form.html:88
+msgid "Tres residentes"
+msgstr "Tres residents"
+
+#: templates/tax_receipt/tax_receipt_form.html:89
+msgid "Cuatro residentes"
+msgstr "Quatre residents"
+
+#: templates/tax_receipt/tax_receipt_form.html:90
+msgid "Cinco residentes"
+msgstr "Cinc residents"
+
+#: templates/tax_receipt/tax_receipt_form.html:91
+msgid "Seis residentes"
+msgstr "Sis residents"
+
+#: templates/tax_receipt/tax_receipt_form.html:92
+msgid "Más de seis residentes"
+msgstr "Més de sis residents"
+
+#: templates/tax_receipt/tax_receipt_form.html:97
+msgid "Superficie de la vivienda"
+msgstr "Superfície de l'habitatge"
+
+#: templates/tax_receipt/tax_receipt_form.html:99
+msgid "Menos de 90 ㎡"
+msgstr "Menys de 90 ㎡"
+
+#: templates/tax_receipt/tax_receipt_form.html:100
+msgid "Entre 90 ㎡ y 120 ㎡"
+msgstr "Entre 90 ㎡ i 120 ㎡"
+
+#: templates/tax_receipt/tax_receipt_form.html:102
+msgid "Entre 120 ㎡ y 180 ㎡"
+msgstr "Entre 120 ㎡ i 180 ㎡"
+
+#: templates/tax_receipt/tax_receipt_form.html:103
+msgid "Entre 180 ㎡ y 240 ㎡"
+msgstr "Entre 180 ㎡ i 240 ㎡"
+
+#: templates/tax_receipt/tax_receipt_form.html:103
+msgid "Más de 240 ㎡"
+msgstr "Més de 240 ㎡"
+
+#: templates/tax_receipt/tax_receipt_form.html:113
+msgid "Sí, de menos de 3 metros"
+msgstr "Sí, de menys de 3 metres"
+
+#: templates/tax_receipt/tax_receipt_form.html:114
+msgid "Sí, de más de 3 metros"
+msgstr "Sí, de més de 3 metres"
