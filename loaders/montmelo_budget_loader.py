@@ -92,8 +92,8 @@ class MontmeloBudgetLoader(SimpleBudgetLoader):
             # mapping to be constant over time, we are forced to amend budget data prior to 2015.
             # See https://github.com/dcabo/presupuestos-aragon/wiki/La-clasificaci%C3%B3n-funcional-en-las-Entidades-Locales
             # Usually we check whether we need to amend the programme code for years before 2015, but in this case it seems
-            # that they're still using some of the old codes in 2017.
-            if int(self.year) <= 2017:
+            # that they're still using some of the old codes in 2018.
+            if int(self.year) <= 2018:
                 fc_code = programme_mapping.get(fc_code, fc_code)
 
         # Income
