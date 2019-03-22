@@ -71,8 +71,8 @@ class MontmeloBudgetLoader(SimpleBudgetLoader):
         # Concepts are the firts three digits from the economic codes
         ec_code = full_ec_code[:3]
 
-        # Item numbers are the last two digits from the economic codes (fourth and fifth digits)
-        item_number = full_ec_code[-2:]
+        # Item numbers are the fourth and fifth digits from the economic codes
+        item_number = full_ec_code[3:5]
 
         # Description
         description = line[mapper.description].strip()
