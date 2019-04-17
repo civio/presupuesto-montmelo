@@ -4,10 +4,12 @@ from budget_app.loaders import SimpleBudgetLoader
 
 expenses_mapping = {
     'default': {'ic_code': None, 'fc_code': 0, 'full_ec_code': 1, 'description': 2, 'forecast_amount': 3, 'actual_amount': 6},
+    '2019': {'ic_code': None, 'fc_code': 0, 'full_ec_code': 1, 'description': 2, 'forecast_amount': 3, 'actual_amount': 5},
 }
 
 income_mapping = {
     'default': {'full_ec_code': 0, 'description': 1, 'forecast_amount': 2, 'actual_amount': 5},
+    '2019': {'full_ec_code': 0, 'description': 1, 'forecast_amount': 2, 'actual_amount': 4},
 }
 
 programme_mapping = {
@@ -92,8 +94,8 @@ class MontmeloBudgetLoader(SimpleBudgetLoader):
             # mapping to be constant over time, we are forced to amend budget data prior to 2015.
             # See https://github.com/dcabo/presupuestos-aragon/wiki/La-clasificaci%C3%B3n-funcional-en-las-Entidades-Locales
             # Usually we check whether we need to amend the programme code for years before 2015, but in this case it seems
-            # that they're still using some of the old codes in 2018.
-            if int(self.year) <= 2018:
+            # that they're still using some of the old codes in 2019.
+            if int(self.year) <= 2019:
                 fc_code = programme_mapping.get(fc_code, fc_code)
 
         # Income
